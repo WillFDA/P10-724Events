@@ -14,6 +14,7 @@ export default function SlideCard({ event, index, idx }) {
     };
 
     return (
+      
       <div
         key={`slider-${event.title}`}
         className={`SlideCard SlideCard--${idx === index ? "display" : "hide"}`}
@@ -24,6 +25,7 @@ export default function SlideCard({ event, index, idx }) {
             <h3>{event.title}</h3>
             <p>{event.description}</p>
             <div>{getMonth(new Date(event.date))}</div>
+            {/* {console.log(event.date)} */}
           </div>
         </div>
       </div>
