@@ -20,8 +20,6 @@ export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
   const [last, setLast] = useState(null);
-
-
   const getData = useCallback(async () => {
     try {
       const dataLoaded = await api.loadData();
@@ -35,7 +33,6 @@ export const DataProvider = ({ children }) => {
     if (data) return;
     getData();
   });
-  // console.log(last)
   // console.log(data)
   return (
     <DataContext.Provider

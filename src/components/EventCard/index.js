@@ -27,18 +27,21 @@ const EventCard = ({
       </div>
     </div>
   );
-EventCard.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string,
-  date: PropTypes.instanceOf(Date).isRequired,
-  title: PropTypes.string.isRequired,
-  small: PropTypes.bool,
-  label: PropTypes.string.isRequired,
-};
 
-EventCard.defaultProps = {
-  imageAlt: "image",
-  small: false,
-}
-
-export default EventCard;
+  EventCard.propTypes = {
+    imageSrc: PropTypes.string, // Enlevé is Required "erreur console navigateur"
+    imageAlt: PropTypes.string,
+    date: PropTypes.instanceOf(Date).isRequired,
+    title: PropTypes.string, // Enlevé is Required "erreur console navigateur"
+    small: PropTypes.bool,
+    label: PropTypes.string.isRequired,
+  };
+  
+  EventCard.defaultProps = {
+    imageSrc: "", // valeur par défaut ici
+    imageAlt: "image",
+    title: "",
+    small: false,
+  };
+  
+  export default EventCard;
